@@ -25,4 +25,8 @@ public class PlayerStateController : MonoBehaviour
         currentState = newState;
         OnStateChanged?.Invoke(newState);
     }
+    public States GetCurrentState()
+    {
+        return currentState;
+    }
 }

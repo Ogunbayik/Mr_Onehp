@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class EnemyRange : EnemyBase
 {
-    public override void HandleMovement()
+    public override void HandleMovement(Vector3 movePos)
     {
-        base.HandleMovement();
+        base.HandleMovement(movePos);
     }
     public override void HandleAttack()
     {
-        var distanceBetweenPlayer = Vector3.Distance(transform.position, player.transform.position);
-
-        if(distanceBetweenPlayer <= attackRange)
-        {
-            base.HandleAttack();
-        }
+        base.HandleAttack();
     }
 }
